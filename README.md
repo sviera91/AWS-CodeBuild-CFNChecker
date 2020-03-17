@@ -10,6 +10,7 @@ practices before deployment.
 Ensure that the following items are taken care of first:
 
 - Ensure CodeBuild IAM role has access to CodePipeline and CloudFormation actions
-- Ensure the CodeBuild container deploys both Python and Ruby runtimes
-- Install cfn-lint as part of the CodeBuild container creation
-- Install cfn_nag as part of the CodeBuild container creation
+- Create appropriate buildspec file (example available [here](buildspec.yml))
+    - Ensure the CodeBuild container deploys both Python and Ruby runtimes
+    - Install cfn-lint as part of the CodeBuild container creation
+    - Install cfn_nag as part of the CodeBuild container creation

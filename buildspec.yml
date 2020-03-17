@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+      ruby: 2.6
+    commands:
+      - echo Entered the install phase...
+      - pip3 install cfn-lint
+      - gem install cfn-nag
+  build:
+    commands:
+      - echo Analyzing stacks
+      - python cfn-checker.py -p $pipeline_name -r $region
+  post_build:
+    commands:
+      - echo Analysis complete.
+      - echo Build completed on `date`
