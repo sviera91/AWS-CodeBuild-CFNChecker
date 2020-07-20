@@ -1,7 +1,7 @@
 # CloudFormation Checker
 
 This python script can be used in CodeBuild as part of the deployment process for Cloudformation stacks using CodePipeline.
-This script is capable of retrieving the the file paths of each stack being deployed and perform cfn-lint, cfn_nag and aws cfn
+This script is capable of retrieving the file paths of each stack being deployed and perform cfn-lint, cfn_nag and aws cfn
 validation tasks against each stack. This can provide a level of security check to ensure all stacks follow correct syntax and best 
 practices before deployment.
 
